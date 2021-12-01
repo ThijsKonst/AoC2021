@@ -1,21 +1,12 @@
 with open("data", "rt") as file:
     counter = 0
-    data = []
-    for line in file: 
-        data.append(int(line))
+    data = file.readlines()
 
-    sum_data = []
-    for i in range(len(data)):
-        if i == len(data) - 2:
-            break
-        sum_data.append(data[i] + data[i+1] + data[i+2])
+    sum_data = [int(data[i]) + int(data[i+1]) + int(data[i+2]) for i in range(len(data)-2)]
 
-    for i in range(len(sum_data)):
-        if i == len(sum_data) - 1:
-            break
+    for i in range(len(sum_data)-1):
         if sum_data[i] < sum_data[i+1]:
             counter += 1
-
     print(counter)
 
 
