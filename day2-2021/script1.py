@@ -4,7 +4,7 @@ with open("data") as file:
     for line in file:
         instruction = line.split(" ")
         direction = instruction[0]
-        amount = int(instruction[1].split("\n")[0])
+        amount = int(instruction[1])
         if direction == "down":
             depth += amount
         if direction == "up":
