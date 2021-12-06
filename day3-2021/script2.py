@@ -45,4 +45,3 @@ with open("data", "r") as file:
             break
 
     print(int(result_most, 2) * int(result_least,2))
-    
