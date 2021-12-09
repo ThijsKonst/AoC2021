@@ -3,18 +3,7 @@ with open('data', 'r') as file:
     counter = 0
     for line in data:
         fline = ""
-        digits = {
-            '1':"",
-            '2':"",
-            '3': "",
-            '4': "",
-            '5': "",
-            '6': "",
-            '7': "",
-            '8': "",
-            '9': "",
-            '0': "",
-        }
+        digits = {'1':"",'2':"",'3':"",'4':"",'5':"",'6':"",'7':"",'8':"",'9':"",'0':""}
         done = False
         while not done:
             for word in line[0].split(" "):
